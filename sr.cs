@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
-using TCore.Logging;
 
 namespace TCore
 {
@@ -84,20 +83,6 @@ namespace TCore
             sr.CorrelationID = crids;
 			return sr;
 		}
-
-        public void Log(LogProvider lp, string s, params object []rgo)
-        {
-            if (lp != null)
-                {
-                if (!Result)
-                    {
-                    string sT = String.Format("{0} FAILED: {1}", s, Reason);
-                    lp.LogEvent(TCore.Logging.CorrelationID.FromCrids(CorrelationID), EventType.Error, sT, rgo);
-                    }
-                else
-                    lp.LogEvent(TCore.Logging.CorrelationID.FromCrids(CorrelationID), EventType.Information, s, rgo);
-                }
-        }
     }
 
     [DataContract]
