@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 16
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatusResult", "StatusResult.csproj", "{0FE8C023-8694-4E19-9FB0-EA38E5B8798B}"
 EndProject
 Global
